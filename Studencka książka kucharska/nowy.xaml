@@ -1,0 +1,35 @@
+﻿<Window x:Class="Studencka_książka_kucharska.nowy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Studencka_książka_kucharska"
+        mc:Ignorable="d"
+        Title="Kreator" Height="750" Width="1024">
+    <Grid>
+        <Label Content="Tytuł przepisu:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" Height="28" Width="110" FontSize="16"/>
+        <TextBox x:Name="title" HorizontalAlignment="Left" Height="22" Margin="120,16,0,0" Text="Tytuł" TextWrapping="Wrap" VerticalAlignment="Top" Width="894" FontFamily="Times New Roman" FontSize="16" SnapsToDevicePixels="True"/>
+        <Button Content="Zapisz" HorizontalAlignment="Left" Margin="905,643,0,0" VerticalAlignment="Top" Height="36" Width="90" FontFamily="Times New Roman" FontSize="16" Click="Zapisz_Click"/>
+        <RichTextBox x:Name="skladniki" Margin="22,76,711,379" FontFamily="Times New Roman" FontSize="16">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Składniki:"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox x:Name="sposob" Margin="348,76,46,126" FontFamily="Times New Roman" FontSize="16">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Sposób przygotowania:"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Content="Dodaj obraz" HorizontalAlignment="Left" Height="38" Margin="104,647,0,0" VerticalAlignment="Top" Width="126" FontFamily="Times New Roman" FontSize="16" Click="Dodajobraz_Click"/>
+        <Image x:Name="obraz" HorizontalAlignment="Left" Height="222" Margin="22,385,0,0" VerticalAlignment="Top" Width="290" MaxWidth="290" MaxHeight="222"/>
+        <Label x:Name="info" Content="" HorizontalAlignment="Left" Margin="348,647,0,0" VerticalAlignment="Top" Width="533" FontFamily="Times New Roman" FontSize="16"/>
+
+
+
+
+    </Grid>
+</Window>

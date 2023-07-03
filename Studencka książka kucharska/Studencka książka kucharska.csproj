@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Studencka_książka_kucharska</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="kreatortlo.png" />
+    <None Remove="tło.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="tło.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="przepisy\" />
+  </ItemGroup>
+
+</Project>

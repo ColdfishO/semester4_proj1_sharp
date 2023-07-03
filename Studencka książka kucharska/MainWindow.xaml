@@ -1,0 +1,30 @@
+﻿<Window x:Class="Studencka_książka_kucharska.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Studencka_książka_kucharska"
+        mc:Ignorable="d"
+        Title="Studencka książka kucharska" Height="450" Width="750">
+    <Grid Visibility="Visible" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="321"/>
+            <ColumnDefinition Width="479*"/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment="Left" Height="433" VerticalAlignment="Center" Width="780" Grid.ColumnSpan="2" Opacity="0.7" Source="/tło.jpg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/tło.jpg" Stretch="Fill" TileMode="None"/>
+            </Image.OpacityMask>
+            <Image.Effect>
+                <BlurEffect/>
+            </Image.Effect>
+        </Image>
+        <Button Content="Przeglądaj..." HorizontalAlignment="Left" Height="54" Margin="120,270,0,0" VerticalAlignment="Top" Width="136" FontFamily="Times New Roman" FontSize="16" Click="Przegladaj_Click"/>
+        <Label Content="Szybkie i proste przepisy pod ręką" Margin="10,10,10,0" HorizontalAlignment="Center"  VerticalAlignment="Top" Grid.ColumnSpan="2" Height="71" FontSize="48" FontWeight="Bold" Background="White" FontFamily="Times New Roman"/>
+        <Button Content="Nowy przepis" Height="55" Margin="173,270,120,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.497,0.55" FontFamily="Times New Roman" FontSize="16" Click="Nowy_Click"/>
+        <TextBox x:Name="szukaj" Grid.ColumnSpan="2" Height="28" Margin="188,168,188,0" Text="Tytuł przepisu" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontFamily="Times New Roman"/>
+        <Label Content="Znajdź przepis:" HorizontalAlignment="Left" Height="28" Margin="76,168,0,0" VerticalAlignment="Top" Width="107" Background="White" FontFamily="Times New Roman" FontSize="16" FontWeight="Normal"/>
+        <Button Content="Szukaj" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="246,168,0,0" VerticalAlignment="Top" Width="101" FontFamily="Times New Roman" FontSize="16" Click="Szukaj_Click"/>
+
+    </Grid>
+</Window>

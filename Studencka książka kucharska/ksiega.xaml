@@ -1,0 +1,37 @@
+﻿<Window x:Class="Studencka_książka_kucharska.ksiega"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Studencka_książka_kucharska"
+        mc:Ignorable="d"
+        Title="Księga" Height="750" Width="1024">
+    <Grid>
+        <Label Content="Tytuł przepisu:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" Height="28" Width="110" FontSize="16"/>
+        <Label x:Name="title" Content="Tytuł" HorizontalAlignment="Left" Margin="125,10,0,0" VerticalAlignment="Top" Width="889" FontFamily="Times New Roman" FontSize="16"/>
+        <TextBlock x:Name="skladniki" Margin="22,76,711,379" FontFamily="Times New Roman" FontSize="16"/>
+        <TextBlock x:Name="sposob" Margin="348,76,46,126" FontFamily="Times New Roman" FontSize="16"/>
+        <Image x:Name="obraz" HorizontalAlignment="Left" Height="222" Margin="22,385,0,0" VerticalAlignment="Top" Width="290" MaxWidth="290" MaxHeight="222"/>
+        <Button x:Name="next" Content="Następny &gt;&gt;" Height="36" Width="100" HorizontalAlignment="Left" Margin="878,649,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman" Click="Next_Click"/>
+        <Button x:Name="prev" Content="&lt;&lt; Poprzedni" Height="36" Width="100" HorizontalAlignment="Left" Margin="764,649,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman" Click="Prev_Click"/>
+        <Button x:Name="edit" Content="Edytuj" Height="36" Width="100" HorizontalAlignment="Left" Margin="587,649,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman" Click="Edit_Click"/>
+        <Button x:Name="delete" Content="Usuń" Height="36" Width="100" HorizontalAlignment="Left" Margin="404,649,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman" Click="Delete_Click"/>
+        <RichTextBox x:Name="sposobedit" Margin="348,76,46,126" FontFamily="Times New Roman" FontSize="16" Visibility="Hidden">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox x:Name="skladnikiedit" Margin="22,76,711,379" FontFamily="Times New Roman" FontSize="16" Visibility="Hidden">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button x:Name="addpic" Content="Dodaj obraz" HorizontalAlignment="Left" Height="38" Margin="104,647,0,0" VerticalAlignment="Top" Width="126" FontFamily="Times New Roman" FontSize="16" Click="Addpic_Click" Visibility="Hidden"/>
+        <Button x:Name="save" Content="Zapisz" HorizontalAlignment="Left" Margin="905,643,0,0" VerticalAlignment="Top" Height="36" Width="90" FontFamily="Times New Roman" FontSize="16" Click="Save_Click" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
